@@ -35,12 +35,6 @@
             "db",
             "srv"
           ]
-        },
-        "messaging": {
-          "kind": "enterprise-messaging",
-          "queue": {
-            "name": "refapps/bpems/abc/BusinessPartnerValidation-srv/1234"
-          } 
         }
       },
       "API_BUSINESS_PARTNER": {
@@ -51,6 +45,15 @@
             "destination": "bupa",
             "requestTimeout": 18000000
           }
+        }
+      },
+      "messaging": {
+        "kind": "local-messaging",
+        "[production]": {
+          "kind": "enterprise-messaging"
+        },
+        "queue": {
+          "name": "refapps/bpems/abc/BusinessPartnerValidation-srv/1234"
         }
       },
       "uaa": {
